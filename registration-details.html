@@ -27,6 +27,7 @@
         <div>
             <p><strong>Name:</strong> <span id="name"></span></p>
             <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Event:</strong> <span id="type"></span></p>
         </div>
         <a href="registration.html">Back to Registration</a>
     </main>
@@ -38,8 +39,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             const name = sessionStorage.getItem('name');
             const email = sessionStorage.getItem('email');
+            const type = sessionStorage.getItem('type');
             document.getElementById('name').textContent = name;
             document.getElementById('email').textContent = email;
+            document.getElementById('type').textContent = type;
         });
     </script>
 </body>

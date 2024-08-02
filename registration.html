@@ -42,6 +42,13 @@
                 <option value="me">Mechanical</option>
                 <option value="ce">Civil</option>
             </select><br><br>
+
+            <label for="eventtype">Event Type</label>
+            <select id="eventtype" name="eventtype" required>
+                <option value="seminar">Seminar</option>
+                <option value="workshop">Workshop</option>
+                <option value="conference">Conferrence</option>
+            </select><br><br>
             
             <label>Type of Participant:</label>
             <input type="radio" id="student" name="participant" value="student" required>
@@ -66,8 +73,10 @@
             
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
+            const type = document.getElementById('eventtype').value;
             sessionStorage.setItem('name', name);
             sessionStorage.setItem('email', email);
+            sessionStorage.setItem('type', type);
         });
     </script>
 </body>
