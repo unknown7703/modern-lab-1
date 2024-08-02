@@ -63,6 +63,11 @@
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault(); 
             window.location.replace("confirmation.html");
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            sessionStorage.setItem('name', name);
+            sessionStorage.setItem('email', email);
         });
     </script>
 </body>

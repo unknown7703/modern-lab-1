@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Details</title>
+    <style>
+         body { font-family: Arial, sans-serif; margin: 0px; width: auto;}
+        header, nav, footer { background-color: #001477; padding: 10px; color: white;width: 100%;}
+       nav a {  text-decoration: none; color: #001327; border-style:solid ;color: white; border-color: #868686;padding: 2px; }   footer { text-align: center; }
+        main { text-align: center; }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>University Technical Event</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="registration.html">Register</a>
+            <a href="fee-calculator.html">Fee Calculator</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Registration Details</h1>
+        <div>
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+        </div>
+        <a href="registration.html">Back to Registration</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 University Technical Event</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const name = sessionStorage.getItem('name');
+            const email = sessionStorage.getItem('email');
+            document.getElementById('name').textContent = name;
+            document.getElementById('email').textContent = email;
+        });
+    </script>
+</body>
+</html>
+
