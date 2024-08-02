@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Registration</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        header, nav, footer { background-color: #f8f9fa; padding: 10px; }
-        nav a { margin: 0 15px; text-decoration: none; color: #007bff; }
-        footer { text-align: center; }
+        body { font-family: Arial, sans-serif; margin: 0px;}
+        header, nav, footer { background-color: #001477; padding: 10px; color: white;}
+       nav a {  text-decoration: none; color: #001327; border-style:solid ;color: white; border-color: #868686;padding: 2px; }     footer { text-align: center; }
         form { max-width: 600px; margin: auto; }
+        
     </style>
 </head>
 <body>
@@ -18,13 +18,14 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="registration.html">Register</a>
-            <a href="contact.html">Contact Us</a>
             <a href="fee-calculator.html">Fee Calculator</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
     <main>
-        <h1>Event Registration</h1>
-        <form >
+        <div style=" margin-bottom:20px;">
+        <h1 style="padding-left: 25%;">Event Registration</h1>
+        <form id="registrationForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
             
@@ -49,14 +50,20 @@
             <label for="faculty">Faculty</label><br><br>
             
             <input type="checkbox" id="terms" name="terms" required>
-            
             <label for="terms">I agree to the terms and conditions</label><br><br>
             
-            <button onclick="location.href='confirmation.html'">Register</button>
+            <button type="submit">Register</button>
         </form>
+    </div>
     </main>
     <footer>
         <p>&copy; 2024 University Technical Event</p>
     </footer>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            window.location.replace("confirmation.html");
+        });
+    </script>
 </body>
 </html>

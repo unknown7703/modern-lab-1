@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        header, nav, footer { background-color: #f8f9fa; padding: 10px; }
-        nav a { margin: 0 15px; text-decoration: none; color: #007bff; }
-        footer { text-align: center; }
+        body { font-family: Arial, sans-serif; margin: 0px;}
+        header, nav, footer { background-color: #001477; padding: 10px; color: white;}
+        nav a {  text-decoration: none; color: #001327; border-style:solid ;color: white; border-color: #868686;padding: 2px; }    footer { text-align: center; }
         form { max-width: 600px; margin: auto; }
     </style>
 </head>
@@ -18,12 +17,13 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="registration.html">Register</a>
-            <a href="contact.html">Contact Us</a>
             <a href="fee-calculator.html">Fee Calculator</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
     <main>
-        <h1>Contact Us</h1>
+        <div style=" margin-bottom:20px;">
+        <h1 style="padding-left: 25%;">Contact Us</h1>
         <form action="contact-confirmation.html" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
@@ -36,6 +36,7 @@
             
             <input type="submit" value="Submit">
         </form>
+    </div>
     </main>
     <footer>
         <p>&copy; 2024 University Technical Event</p>

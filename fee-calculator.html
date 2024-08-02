@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Fee Calculator</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        header, nav, footer { background-color: #f8f9fa; padding: 10px; }
-        nav a { margin: 0 15px; text-decoration: none; color: #007bff; }
+       body { font-family: Arial, sans-serif; margin: 0px;}
+       header, nav, footer { background-color: #001477; padding: 10px; color: white;}
+       nav a {  text-decoration: none; color: #001327; border-style:solid ;color: white; border-color: #868686;padding: 2px; }    
         footer { text-align: center; }
         form { max-width: 600px; margin: auto; }
         #output { font-weight: bold; }
@@ -19,16 +19,52 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="registration.html">Register</a>
-            <a href="contact.html">Contact Us</a>
             <a href="fee-calculator.html">Fee Calculator</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
     <main>
-        <h1>Registration Fee Calculator</h1>
+        <h1 style="padding-left: 25%;">Registration Fee Calculator</h1>
         <form oninput="calculateFee()">
             <label for="participants">Number of Participants:</label>
             <input type="number" id="participants" name="participants" min="1" required><br><br>
             
             <label for="event">Type of Event:</label>
             <select id="event" name="event" required>
-                <option value="workshop">Workshop</
+                <option value="workshop">Workshop</option>
+                <option value="seminar">Seminar</option>
+                <option value="conference">Conference</option>
+            </select><br><br>
+
+            <label for="fee">Calculated Fee:</label>
+            <output id="output" name="output">0</output><br><br>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 University Technical Event</p>
+    </footer>
+
+    <script>
+        function calculateFee() {
+            const participants = document.getElementById('participants').value;
+            const event = document.getElementById('event').value;
+            let feePerPerson;
+
+            switch(event) {
+                case 'workshop':
+                    feePerPerson = 100;
+                    break;
+                case 'seminar':
+                    feePerPerson = 150;
+                    break;
+                case 'conference':
+                    feePerPerson = 200;
+                    break;
+            }
+
+            const totalFee = participants * feePerPerson;
+            document.getElementById('output').value = totalFee;
+        }
+    </script>
+</body>
+</html>
