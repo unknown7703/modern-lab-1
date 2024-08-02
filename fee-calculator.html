@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Fee Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header, nav, footer { background-color: #f8f9fa; padding: 10px; }
+        nav a { margin: 0 15px; text-decoration: none; color: #007bff; }
+        footer { text-align: center; }
+        form { max-width: 600px; margin: auto; }
+        #output { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>University Technical Event</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="registration.html">Register</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="fee-calculator.html">Fee Calculator</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Registration Fee Calculator</h1>
+        <form oninput="calculateFee()">
+            <label for="participants">Number of Participants:</label>
+            <input type="number" id="participants" name="participants" min="1" required><br><br>
+            
+            <label for="event">Type of Event:</label>
+            <select id="event" name="event" required>
+                <option value="workshop">Workshop</
